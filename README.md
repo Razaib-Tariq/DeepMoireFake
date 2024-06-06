@@ -3,5 +3,5 @@ Through the Lens: Benchmarking Deepfake Detectors Against Moiré-Induced Distort
 
 Demoire Methods.
 
-1) https://github.com/zyxxmu/DDA
-2) https://github.com/CVMI-Lab/UHDM
+1) DDA: https://github.com/zyxxmu/DDA
+2) UHDM: https://github.com/CVMI-Lab/UHDM
