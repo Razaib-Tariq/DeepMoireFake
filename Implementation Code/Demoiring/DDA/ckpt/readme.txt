@@ -1,10 +1,14 @@
+Weights can be downloaded from official Repo 
+
+https://github.com/zyxxmu/DDA
+
 DMCNN / LCDMoire
 dmcnn_aim.pth
 
 DMCNN-DDA / LCDMoire
 Best_performance_mbcnn_aim_654_stage2_statedict_epoch046_psnr43.6541.pth
 
-DMCNN / FHDMI
+DMCNN / FHDMI ( used for testing )
 dmcnn_fhdmi.pth
 
 DMCNN-DDA / FHDMI
@@ -16,8 +20,8 @@ mbcnn_aim.pth
 MBCNN-DDA / LCDMoire
 Best_performance_mbcnn_aim_654_stage2_statedict_epoch046_psnr43.6541.pth
 
-MBCNN / FHDMI
+MBCNN / FHDMI ( used for testing )
 mbcnn_fhdmi.pth
 
-MBCNN-DDA / FHDMI
+MBCNN-DDA / FHDMI ( used for testing )
 Best_performance_mbcnn_fhdmi_752_stage2_statedict_epoch032_psnr24.7991
