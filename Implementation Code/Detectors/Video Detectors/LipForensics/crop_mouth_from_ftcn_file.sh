@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES="1" python crop_mouth_from_ftcn_file.py
