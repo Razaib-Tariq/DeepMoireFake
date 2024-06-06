@@ -1,7 +1,10 @@
 ### DeepMoireFake
+
 Through the Lens: Benchmarking Deepfake Detectors Against Moiré-Induced Distortions
 
-### Dataset: We have uplaoded samples for now and we will release the full dataset after the paper is accepted.
+### Dataset: 
+
+We have uplaoded samples for now and we will release the full dataset after the paper is accepted.
 
 ### Download
 
