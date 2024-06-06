@@ -1,0 +1,52 @@
+# ## A quick demo play for your own data using our pre-trained model, no need to download datasets
+# GENERAL:
+#   GPU_ID: '0'
+#   SEED: 123
+#   WORKER: 4
+#   # SAVE_PREFIX: '/media/NAS/DATASET/Moire-Pattern/iphone/demoire/ESDNet-L/BenQ/middle_on/CelebDF'
+#   SAVE_PREFIX: './demo_test_UHDM_large_checkpoint_dfdca2'
+#   EXP_NAME: 'exp'
+
+# DATA:
+#   DEMO_DATASET: '/media/NAS/DATASET/Moire-Pattern/iphone/Moire1/face_crop/BenQ/same_pattern/middle_on/DFD/s' # Insert the root of your moire images
+
+# MODEL:
+#   EN_FEATURE_NUM: 48
+#   EN_INTER_NUM: 32
+#   DE_FEATURE_NUM: 64
+#   DE_INTER_NUM: 32
+#   SAM_NUMBER: 2 # Note this value needs to be consistent with the pre-trained model! i.e., 1 for ESDNet and 2 for ESDNet-L
+
+# TEST:
+#   SAVE_IMG: png # The file type (e.g., png, jpg) for saving the output image; set False to avoid saving
+#   LOAD_PATH: '/home/minji/UHDM/pretrain_model/UHDM_large_checkpoint.pth' # Specify the checkpoint path
+
+
+### test mutiple folders at the same time ### 
+
+GENERAL:
+  GPU_ID: 0
+  SEED: 123
+  WORKER: 4
+  SAVE_PREFIX: 'CelebDF/'
+  EXP_NAME: 'exp'
+
+DATA:
+  DEMO_DATASET:
+    - 'CelebDF/Real/'
+    - 'CelebDF/Fake/' # Insert the root of your moire images
+
+OUTPUT:
+  REAL: 'CelebDF/Real'
+  FAKE: 'CelebDF/Fake'
+
+MODEL:
+  EN_FEATURE_NUM: 48
+  EN_INTER_NUM: 32
+  DE_FEATURE_NUM: 64
+  DE_INTER_NUM: 32
+  SAM_NUMBER: 2 # Note this value needs to be consistent with the pre-trained model! i.e., 1 for ESDNet and 2 for ESDNet-L
+
+TEST:
+  SAVE_IMG: png # The file type (e.g., png, jpg) for saving the output image; set False to avoid saving
+  LOAD_PATH: 'UHDM/pretrain_model/UHDM_large_checkpoint.pth' # Specify the checkpoint path

@@ -1,0 +1,46 @@
+***enviornment settings 
+**Make environment using the settings from below and run the code, if there is a conflict of packages, read Readme_requirements.txt
+
+python 3.8.19
+
+pip install certifi==2024.2.2 \
+charset-normalizer==3.3.2 \
+colour==0.1.5 \
+contourpy==1.1.1 \
+cycler==0.12.1 \
+fonttools==4.52.4 \
+idna==3.7 \
+imageio==2.34.1 \
+importlib_resources==6.4.0 \
+jsonpatch==1.33 \
+jsonpointer==2.4 \
+kiwisolver==1.4.5 \
+matplotlib==3.7.5 \
+networkx==3.1 \
+numpy==1.24.4 \
+opencv-python==4.9.0.80 \
+packaging==24.0 \
+pillow==10.3.0 \
+pip==24.0 \
+pyparsing==3.1.2 \
+python-dateutil==2.9.0.post0 \
+PyWavelets==1.4.1 \
+requests==2.32.2 \
+scikit-image==0.19.3 \
+scipy==1.10.1 \
+setuptools==69.5.1 \
+six==1.16.0 \
+thop==0.1.1.post2209072238 \
+tifffile==2023.7.10 \
+torch==1.10.0 \
+torchaudio==0.10.0 \
+torchnet==0.0.4 \
+torchvision==0.11.1 \
+tornado==6.4 \
+tqdm==4.66.4 \
+typing_extensions==4.12.0 \
+urllib3==2.2.1 \
+visdom==0.2.4 \
+websocket-client==1.8.0 \
+wheel==0.43.0 \
+zipp==3.19.0
