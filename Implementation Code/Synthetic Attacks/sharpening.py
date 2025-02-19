@@ -1,0 +1,36 @@
+import cv2
+import numpy as np
+import os
+
+def sharpen_images_with_nested_folders(input_dir, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
+    
+    
+    for root, dirs, files in os.walk(input_dir):
+        for file in files:
+   
+            if file.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.tiff')):
+                input_image_path = os.path.join(root, file)
+            
+                relative_path = os.path.relpath(root, input_dir)
+                output_folder_path = os.path.join(output_dir, relative_path)
+                os.makedirs(output_folder_path, exist_ok=True)
+                
+                output_image_path = os.path.join(output_folder_path, file)
+                
+                image = cv2.imread(input_image_path)
+                if image is None:
+                    print(f"cannot load the image: {input_image_path}")
+                    continue
+                
+                sharpening_kernel = np.array([[0, -1, 0],
+                                                       [-1, 9, -1],
+                                                       [0, -1, 0]])
+                sharpened_image = cv2.filter2D(image, -1, sharpening_kernel)
+                
+                cv2.imwrite(output_image_path, sharpened_image)
+                print(f"Processed and saved: {output_image_path}")
+
+input_dir = "//"  
+output_dir = "//" 
+sharpen_images_with_nested_folders(input_dir, output_dir)
