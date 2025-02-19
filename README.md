@@ -4,7 +4,7 @@ Through the Lens: Benchmarking Deepfake Detectors Against Moiré-Induced Distort
 
 ### Dataset: 
 
-Currently, we have uploaded samples. However, we plan on making the complete dataset available once the publication has been accepted.
+Currently, we have uploaded samples. However, we plan on making the complete dataset available once the publication has been accepted. Meanwhile please visit the DOI Link: [DOI](https://doi.org/10.5281/zenodo.14885421)
 
 ### Download:
 
