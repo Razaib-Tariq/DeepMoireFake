@@ -10,5 +10,5 @@ Currently, we have uploaded samples. However, we plan on making the complete dat
 
 To have access to the DeepMoiréFake upon the publication of the full paper, kindly complete the following [google form](https://forms.gle/oifqaoujH6q73JnR6). Upon acceptance of the paper, the form will start accepting the requests, and the download link will be provided to you.
 
-## Contect
+## Contact
 If you have any questions, please contact us at razaibtariq@g.skku.edu and minji.h0224@g.skku.edu.
