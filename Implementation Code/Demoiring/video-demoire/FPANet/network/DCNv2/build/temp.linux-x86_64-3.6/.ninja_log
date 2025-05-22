@@ -1,0 +1,10 @@
+# ninja log v5
+0	2700	1668346495636568831	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cpu/dcn_v2_im2col_cpu.o	fc74ffe8943319e7
+1	3554	1668346496492647320	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cpu/dcn_v2_psroi_pooling_cpu.o	6fdbba94bc7672d7
+0	15634	1668346508557753490	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/vision.o	655c800009504f29
+2	2678	1668350982616531658	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cpu/dcn_v2_im2col_cpu.o	efb6af8a3be7d80
+3	3429	1668350983364578986	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cpu/dcn_v2_psroi_pooling_cpu.o	8466424de8c10337
+3	8296	1668350988224885379	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cuda/dcn_v2_cuda.o	e440f322e36201b6
+3	8404	1668350988332892164	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cuda/dcn_v2_im2col_cuda.o	785a237995529687
+4	8660	1668350988588908248	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cuda/dcn_v2_psroi_pooling_cuda.o	f7d4169598aedb45
+2	15487	1668350995413335125	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-3.6/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/vision.o	11988e32fe7745c0

@@ -1,0 +1,59 @@
+# ------------------------------------------------------------------------
+# Copyright (c) 2022 megvii-model. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from BasicSR (https://github.com/xinntao/BasicSR)
+# Copyright 2018-2020 BasicSR Authors
+# ------------------------------------------------------------------------
+# general settings
+name: FPANet
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  val:
+    name: iPhone-v1
+    dataroot_gt: /nn24_FPANet/datasets/iphone/test/source/gt/video_1/
+    dataroot_lq: /nn24_FPANet/datasets/iphone/test/target/lq/video_18/
+    io_backend:
+      type: disk
+    mode: multi
+
+
+network_g:
+  type: FPANet
+  width: 48
+  enc_blk_nums: [2, 2, 4]
+  middle_blk_num: 12
+  dec_blk_nums: [2, 2, 4]
+
+# path
+path:
+  root: /nn24_FPANet/  # Please update the 'root' path to match your local project directory.
+  pretrain_network_g: /nn24_FPANet/experiments/FPANet/models/net_g_35000.pth
+  strict_load_g: true
+  resume_state: ~
+
+# validation settings
+val:
+  val_freq: !!float 2e4
+  save_img: true
+  use_image: true
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+    lpips:
+      type: calculate_lpips
+      crop_border: 0
+      test_y_channel: false
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500

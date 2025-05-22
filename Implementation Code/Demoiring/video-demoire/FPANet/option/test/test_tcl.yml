@@ -1,0 +1,59 @@
+# ------------------------------------------------------------------------
+# Copyright (c) 2022 megvii-model. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from BasicSR (https://github.com/xinntao/BasicSR)
+# Copyright 2018-2020 BasicSR Authors
+# ------------------------------------------------------------------------
+# general settings
+name: FPANet
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  val:
+    name: TCL-v1
+    dataroot_gt: ./datasets/tcl/test/target
+    dataroot_lq: ./datasets/tcl/test/source
+    io_backend:
+      type: disk
+    mode: multi
+
+
+network_g:
+  type: FPANet
+  width: 48
+  enc_blk_nums: [2, 2, 4]
+  middle_blk_num: 12
+  dec_blk_nums: [2, 2, 4]
+
+# path
+path:
+  root: root: /path/to/your/project  # Please update the 'root' path to match your local project directory.
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+# validation settings
+val:
+  val_freq: !!float 2e4
+  save_img: true
+  use_image: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+    lpips:
+      type: calculate_lpips
+      crop_border: 0
+      test_y_channel: false
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500

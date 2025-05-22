@@ -1,0 +1,125 @@
+# ------------------------------------------------------------------------
+# Copyright (c) 2022 megvii-model. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from BasicSR (https://github.com/xinntao/BasicSR)
+# Copyright 2018-2020 BasicSR Authors
+# ------------------------------------------------------------------------
+# general settings
+name: FPANet
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  train:
+    name: TCL-v1
+    dataroot_gt: ./datasets/tcl/train/target
+    dataroot_lq: ./datasets/tcl/train/source
+    mode: multi
+
+    io_backend:
+      type: disk
+
+    gt_size: 384
+    use_flip: false
+    use_rot: false
+
+    # data loader
+    use_shuffle: true
+    num_worker_per_gpu: 8
+    batch_size_per_gpu: 1
+    prefetch_mode: ~
+
+  val:
+    name: TCL-v1
+    dataroot_gt: ./datasets/tcl/test/target
+    dataroot_lq: ./datasets/tcl/test/source
+    io_backend:
+      type: disk
+    mode: multi
+
+
+network_g:
+  type: FPANet
+  width: 48
+  enc_blk_nums: [2, 2, 4]
+  middle_blk_num: 12
+  dec_blk_nums: [2, 2, 4]
+
+# path
+path:
+  root: /path/to/your/project  # e.g., /home/yourname/Desktop/Research/FPANet — modify based on your setup.
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+# training settings
+train:
+  optim_g:
+    type: AdamW
+    lr: !!float 1e-3
+    weight_decay: 0.
+    betas: [0.9, 0.9]
+
+  scheduler:
+    type: TrueCosineAnnealingLR
+    T_max: 400000
+    eta_min: !!float 1e-7
+
+  total_iter: 400000
+  warmup_iter: -1 # no warm up
+
+  # losses
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1
+    # reduction: mean
+
+  perceptual_opt:
+    type: PerceptualLoss
+    layer_weights:
+      'relu1_1': !!float 1.0
+      'relu2_1': !!float 1.0
+      'relu3_1': !!float 1.0
+    vgg_type: vgg19
+    use_input_norm: true
+    range_norm: false
+    perceptual_weight: 1.
+    style_weight: 0
+    criterion: l1
+
+  frequency_opt:
+    type: FrequencyLoss
+    loss_weight: 0.1
+    criterion: l1
+
+# validation settings
+val:
+  val_freq: !!float 2e4
+  save_img: true
+  use_image: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+    lpips:
+      type: calculate_lpips
+      crop_border: 0
+      test_y_channel: false
+
+# logging settings
+logger:
+  print_freq: 200
+  save_checkpoint_freq: !!float 5e3
+  use_tb_logger: true
+  
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500

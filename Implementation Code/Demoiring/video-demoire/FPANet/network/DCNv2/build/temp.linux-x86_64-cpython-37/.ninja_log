@@ -1,0 +1,10 @@
+# ninja log v5
+2	15104	1668347372548926728	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/vision.o	31eb41ba41d972a2
+10	3688	1668348279467012070	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cpu/dcn_v2_im2col_cpu.o	498fcbfab38e72f9
+10	4995	1668348280775092495	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cpu/dcn_v2_psroi_pooling_cpu.o	4f3103809264bcd0
+12	18452	1668348294215923516	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/vision.o	31eb41ba41d972a2
+9	3826	1668350916036097339	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cpu/dcn_v2_im2col_cpu.o	4dfd50690dcc24b4
+10	4714	1668350916924159917	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cpu/dcn_v2_psroi_pooling_cpu.o	2c3bf173c6fecae7
+10	11420	1668350923620628333	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cuda/dcn_v2_im2col_cuda.o	e9f8ecb5a927b09
+11	11971	1668350924172666687	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/cuda/dcn_v2_psroi_pooling_cuda.o	ddddfe86cd84f992
+11	18757	1668350930953134514	/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/build/temp.linux-x86_64-cpython-37/home/dhrudfhr98/model/NAFNet_single/basicsr/models/archs/DCNv2/src/vision.o	b406ba429289b06d
