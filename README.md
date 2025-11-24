@@ -18,9 +18,9 @@ Note if you use our dataset, the paper must be cited together with it.
 
 ### Dataset: 
 
-Currently, we have uploaded samples. However, we plan on making the complete dataset available once the publication has been accepted. Meanwhile please visit the [DOI](https://doi.org/10.7910/DVN/XYOSYW) Link.
-
 Doi link provided is for restricted access for education and research purposes.
+
+Please visit the [DOI](https://doi.org/10.7910/DVN/XYOSYW) Link.
 
 Note that If you use our dataset, please consider using the citation.
 ```
