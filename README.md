@@ -2,7 +2,7 @@
 
 Through the Lens: Benchmarking Deepfake Detectors Against Moiré-Induced Distortions
 
-[![NeurIPS 2025 - Accepted](https://img.shields.io/badge/NeurIPS%202025-Accepted-brightgreen.svg)](https://arxiv.org/abs/2509.16602)
+[![NeurIPS 2025 - Accepted](https://img.shields.io/badge/NeurIPS%202025-Accepted-brightgreen.svg)](https://arxiv.org/abs/2510.23225)
 
 Note if you use our dataset, the paper must be cited together with it.
 ```
