@@ -16,9 +16,11 @@ Note if you use our dataset, the paper must be cited together with it.
       url={https://openreview.net/forum?id=HtGOaraQEH}}
 ```
 
-### Dataset: 
+### Dataset:
 
-Doi link provided is for restricted access for education and research purposes.
+Kindly fill out the form first to get access to the DOI. [Google Form](https://forms.gle/XGY6AUdFaBRjBHHt8)
+
+The link provided is for restricted access for education and research purposes.
 
 Please visit the [DOI](https://doi.org/10.7910/DVN/XYOSYW) Link.
 
